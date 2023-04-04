@@ -5,6 +5,6 @@ from .models import Course, Script
 
 def index(request):
 	courses = Course.objects.order_by('priority')
-	scripts = SCRIPTS.objects.all()
+	scripts = Script.objects.all()
 	return render(request, 'main/index.html', {'courses': courses, 'scripts': scripts})
 	
