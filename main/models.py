@@ -10,6 +10,7 @@ class Course(models.Model):
     image = models.ImageField(upload_to='images/', blank=True, null=True)
     price = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     slashed_price = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
+    sold = models.IntegerField(default=0, blank=True, null=True)
     priority = models.IntegerField(default=0, blank=True, null=True)
     date = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
